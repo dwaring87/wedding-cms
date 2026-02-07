@@ -25,7 +25,7 @@ if [[ ! -z "$ADMIN_EMAIL" ]] && [[ ! -z "$ADMIN_PASSWORD" ]] && [[ ! -z "$DB_FIL
 
 			# Disable setup user
 			echo "--> Disabling initial setup user"
-			sqlite3 "$DB_FILENAME" "UPDATE directus_users SET status = 'archived' WHERE email = 'webmaster@davidwaring.net'"
+			sqlite3 "$DB_FILENAME" "UPDATE directus_users SET status = 'archived' WHERE email = 'setup@example.com'"
 
 		else
 			echo "--> Admin user already exists, skipping"
