@@ -1,40 +1,36 @@
-{% layout "base" %} {% block content %}
+{% layout "wedding-planning-base" %} {% block content %}
+    <h1>RSVP Updated</h1>
 
-<h1>RSVP Updated</h1>
+    <p>
+        <strong>{{ guest.name }}</strong> has updated their RSVP.  Their current details are:
+    </p>
 
-<p>
-  <strong>{{ guest.name }}</strong> has updated their RSVP.  Their current details are:
-</p>
-
-<div style="background-color: #f3f4f6; padding: 5px; margin: 15px; border-radius: 15px; border: 1px soild #c8c8c8">
-  <ul>
-    <li><strong>Name:</strong> {{ guest.name }}</li>
-    <li><strong>Email:</strong> {{ guest.email }}</li>
-    <li><strong>RSVP: </strong>
-{% if guest.rsvp %}
-      YES
-{% else %}
-      no
-{% endif %}
-    </li>
-    <li><strong>Meal Choice: </strong>
-{% if guest.meal_choice and guest.meal_choice.name %}
-      {{ guest.meal_choice.name }}
-{% else %}
-      <em>none</em>
-{% endif %}
-    </li>
-{% if guest.dietary_restrictions %}
-    <li><strong>Dietary Restrictions:</strong>
-      <ul>
-{% for dr in guest.dietary_restrictions %}
-        <li>{{ dr.dietary_restrictions_id.name }}</li>
-{% endfor %}
-      </ul>
-    </li>
-{% endif %}
-    <li><strong>Notes:</strong><br />{{ guest.notes }}</li>
-  </ul>
-</div>
-
+    <ul>
+        <li><strong>Name:</strong> {{ guest.name }}</li>
+        <li><strong>Email:</strong> {{ guest.email }}</li>
+        <li><strong>RSVP: </strong>
+            {% if guest.rsvp %}
+                YES
+            {% else %}
+                no
+            {% endif %}
+        </li>
+        <li><strong>Meal Choice: </strong>
+            {% if guest.meal_choice and guest.meal_choice.name %}
+                {{ guest.meal_choice.name }}
+            {% else %}
+                <em>none</em>
+            {% endif %}
+        </li>
+        {% if guest.dietary_restrictions %}
+            <li><strong>Dietary Restrictions:</strong>
+                <ul>
+                    {% for dr in guest.dietary_restrictions %}
+                        <li>{{ dr.dietary_restrictions_id.name }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endif %}
+        <li><strong>Notes:</strong><br />{{ guest.notes }}</li>
+    </ul>
 {% endblock %}
