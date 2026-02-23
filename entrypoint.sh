@@ -94,7 +94,7 @@ if [[ "$RSVP_NOTIFICATIONS_ENABLE" == "true" ]] && [[ ! -z "$RSVP_NOTIFICATIONS_
 		echo "--> Enabling RSVP Notifications Flow [$RSVP_NOTIFICATIONS_FLOW_ID]"
 		sqlite3 "$DB_FILENAME" "UPDATE directus_flows SET status = 'active' WHERE id = '$RSVP_NOTIFICATIONS_FLOW_ID'"
 
-		echo "--> Updating Send Email options [$RSVP_NOTIFICATIONS_RECIPIENTS]"
+		echo "--> Updating RSVP Notification Recipients [$RSVP_NOTIFICATIONS_RECIPIENTS]"
 		options=$(sqlite3 "$DB_FILENAME" "SELECT options FROM directus_operations WHERE name = 'Send Email' AND flow = '$RSVP_NOTIFICATIONS_FLOW_ID'")
 		mod_recipients=$(echo "\"$RSVP_NOTIFICATIONS_RECIPIENTS\"" | sed -r 's/,/","/g')
 		mod_options=$(echo "$options" | jq ".to = [$mod_recipients]")
