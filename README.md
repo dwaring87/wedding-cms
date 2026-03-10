@@ -184,3 +184,8 @@ The Users module contains the User Directory, which is a list of all accounts th
 
 You can create additional users to give others access to the database.  To do so, click the '+' icon in the top right and fill out the new user form.  The user should have a name, email address, and password set.  To give them full access to all collections in the database, you can assign them the Administrator role (under Admin Options at the bottom of the form).  You can also [create additional roles](https://directus.io/docs/guides/auth/access-control) if you want the user to have different access policies.
 
+## Setup
+
+This project is designed to be used as a Docker image.  For more information on how to set up the CMS in conjunction with the website, visit the [wedding-docker](https://github.com/dwaring87/wedding-docker) repository.
+
+If you don't want to use the Docker image, you could manually setup a Docker instance and use the SQLite database, liquid templates, and uploads provided in this repository to initialize a new instance.
