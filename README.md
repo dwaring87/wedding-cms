@@ -43,7 +43,7 @@ This information can be displayed on the homepage of the wedding website:
 
 <br /><hr /><br />
 
-The database can store [customizable pages](https://github.com/dwaring87/wedding-cms/new/main?filename=README.md#pages-customizable-pages-for-the-website) that are displayed on the website.  One or more of these pages can be featured on the homepage of the wesbite (the rest are accessible from the toolbar at the top of every page).
+The database can store [customizable pages](#pages-customizable-pages-for-the-website) that are displayed on the website.  One or more of these pages can be featured on the homepage of the wesbite (the rest are accessible from the toolbar at the top of every page).
 
 <img width="810" height="343" alt="image" src="https://github.com/user-attachments/assets/99db475c-3245-42d0-8879-d1dee0cb5f36" />
 
@@ -76,19 +76,85 @@ There are a number of photos that are used on the wesbite and can be customized:
 
 #### Guests: A list of all individuals invited to the wedding
 
+The Guests collection is a table of all individuals invited to the wedding.
+
+<img width="926" height="327" alt="image" src="https://github.com/user-attachments/assets/4ca50206-7026-45eb-b71d-fb7b83e46fd5" />
+
+Details about the guests include:
+
+- Name
+- Email Address
+- RSVP
+- Associated Meal Choice
+- Associated Dietary Restrictions
+- Notes (a free-text field)
+- Associated Invitation
+- Associated Table
+
+<img width="923" height="1197" alt="image" src="https://github.com/user-attachments/assets/0d9fc57b-5f01-40c6-997d-c8b181bea55c" />
+
+
+If using the RSVP feature of the website, the user can update their own details (such as add an email address, select a meal choice, add any dietary restrictions, and add additional notes) when they RSVP.  The only required field when adding a new guest is their name.
+
 #### Invitations: An address book for invitations, allowing guests to be grouped for shared invitations
+
+Invitations represent the physical invites that would be sent out to individuals invited to the wedding.  An invitation can include one or more guests (such as all guests living in the same household).  Invitations include:
+
+- Name (the name of the guests or family associated with the invitation)
+- Address (mailing address for the invitation)
+- Associated Guests (they must already exist in the Guests table before adding them to an invitation)
+- Invite Code (a human-readable-id in the form of adjective-color-animal that is entered on the website to lookup the invitation when RSVPing)
+
+<img width="922" height="857" alt="image" src="https://github.com/user-attachments/assets/0de11f6c-34d9-4359-81fa-e73e9077c64a" />
+
 
 #### Meal Choices: offer meal choices to guests when they RSVP
 
+These are the options for meals that are presented to a guest when they RSVP.  A meal choice includes a name and a description.  The Meal Choices table includes a count and list of all guests that have selected a particular choice.
+
+<img width="925" height="266" alt="image" src="https://github.com/user-attachments/assets/6f8c3629-e1c6-4f94-bf0e-976746bae918" />
+
 #### Dietary Restrictions: keep track of individual's dietary restrictions
+
+These are the pre-selected dietary restrictions that are presented to a guest when they RSVP.  You can change these options if you want different options for your guests.  A guest can also select an 'Other' option and give more details in the notes when they RSVP.
+
+<img width="921" height="478" alt="image" src="https://github.com/user-attachments/assets/ccbd6976-9446-4892-b277-45df842b6474" />
 
 #### Tables: table assignments for individuals
 
+This collection contains all of the tables that will be available at the wedding.  You can assign guests to each table, making it easier to manage where people are sitting and find guests that have not been assigned a table yet.
+
+<img width="917" height="717" alt="image" src="https://github.com/user-attachments/assets/94ccb7b0-2071-4685-9527-5bf70ff6a2ed" />
+
 #### Pages: Customizable pages for the website
 
-#### Recommendations: A list of local recommendations (restaurants, museums, parks, etc) for visiting guesets
+The pages collection contains all of the customizable pages for the website, such as information about how the couple met, details about the wedding, hotel blocks, gift registries, etc.  You can create any number of customizable pages, which will be linked from the toolbar on the website.  The content of each page is edited with a WYSIWYG editor and can include photos.  The page slug is used as the URL for the page.
+
+<img width="929" height="1233" alt="image" src="https://github.com/user-attachments/assets/be8a8947-b2ae-4c06-8716-fd4cd539c1df" />
+
+#### Recommendations: A list of local recommendations (restaurants, museums, parks, etc) for visiting guests
+
+You can (optionally) include a list of recommended local attractions for guests unfamiliar with the area.  To enable this feature, create a page for recommendations and make sure the "Display Recommendations" option is enabled for that page.  Then, make any necessary changes to the recommendation categories (used to group recommendations of the same category) and the recommendations themselves.  The recommendations include:
+
+- A category
+- Name
+- Location (such as the address)
+- Description
+- Website(s)
+- Image
+
+<img width="929" height="1233" alt="image" src="https://github.com/user-attachments/assets/481241c3-eb85-4d15-aa03-3e0239f0b2b1" />
+
+The recommendations will then be displayed below the content of the recommendation page (the page with the "Display Recommendations" option enabled):
+
+<img width="1029" height="1090" alt="image" src="https://github.com/user-attachments/assets/693121cb-c80a-46f7-a1ab-0b32335c7dcb" />
 
 #### Alert: An important message displayed on all pages of the website
+
+An alert is an important message that is displayed prominently on all pages of the website.  When enabled, it will display a title and message as a pop-up banner on every page.
+
+<img width="830" height="298" alt="image" src="https://github.com/user-attachments/assets/38d1aaaf-19da-49c1-a429-b9c18a328b4a" />
+
 
 ### <img width="51" height="48" alt="image" src="https://github.com/user-attachments/assets/b0ce1149-b742-4c5d-9607-879dbfaacccc" /> Files
 
