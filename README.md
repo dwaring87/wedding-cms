@@ -1,5 +1,8 @@
 # Wedding Planning Content Management System
 
+<img width="1174" height="724" alt="image" src="https://github.com/user-attachments/assets/98423eab-9eb1-41b8-9f3c-1206729cda7b" />
+
+
 This is a [Directus](https://directus.io/) database and management tool used for wedding planning and to populate the content of a [wedding website](https://github.com/dwaring87/wedding-site).
 
 It can be used to manage customizable pages on the website, guest lists, and invitations to groups of guests.  The guests can RSVP to the wedding on the website and their information is stored in the database.  There is a pre-installed mailing lists module that allows you to send email messages to guests.
