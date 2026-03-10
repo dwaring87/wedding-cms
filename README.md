@@ -37,7 +37,7 @@ A brief schedule outline includes the main details about the events for the wedd
 
 <img width="837" height="566" alt="image" src="https://github.com/user-attachments/assets/bcb3ef2d-c085-4462-b763-45cb81e3f206" />
 
-This information can be displayed on the homepage of the wedding website:
+This information will be displayed on the homepage of the wedding website:
 
 <img width="814" height="870" alt="image" src="https://github.com/user-attachments/assets/1e6066ec-8305-4907-bde8-017130173bc2" />
 
@@ -53,7 +53,7 @@ If a page is featured, it is displayed in a box on the homepage below the schedu
 
 <br /><hr /><br />
 
-The RSVP feature of the website can be controlled by a number of options.  When enabled, users can go to the `/rsvp` page of the website, with links displayed prominently on the homepage and in the toolbar (if the RSVP feature is disabled, there are no links displayed and any links to the `/rsvp` page will be redirected to the homepage).  If the RSVP feature is enabled, but RSVPs are closed (such as after a deadline to RSVP), users will see a customizable message explaining why RSVPs have been closed.
+The RSVP feature of the website can be controlled by a number of options.  When enabled, users can go to the `/rsvp` page of the website, with links displayed prominently on the homepage and in the toolbar.  If the RSVP feature is disabled, there are no links displayed and any links to the `/rsvp` page will be redirected to the homepage.  If the RSVP feature is enabled, but RSVPs are closed (such as after a deadline to RSVP), users will see a customizable message explaining why RSVPs have been closed.
 
 <img width="833" height="782" alt="image" src="https://github.com/user-attachments/assets/e8a899eb-c3e7-47fe-a5f9-88e0feb170b5" />
 
@@ -70,7 +70,6 @@ There are a number of photos that are used on the wesbite and can be customized:
 
 - **Home:** this photo is displayed on the homepage and has the couple's name, date, and venue displayed over it <img width="1202" height="804" alt="image" src="https://github.com/user-attachments/assets/352f6164-bbd6-4edb-a139-27ff4a06fb47" />
 - **Info:** this photo is displayed on the More Information page (`/info`) along with a list of all of the pages<img width="941" height="974" alt="image" src="https://github.com/user-attachments/assets/90217878-e4fc-4650-8f54-f93148749ee1" />
-
 - **RSVP:** this photo is displayed after a guest has RSVPed, along with a list of the pages on the website <img width="604" height="878" alt="image" src="https://github.com/user-attachments/assets/3b961001-fd4a-4e68-b7cb-8166402c756e" />
 
 
@@ -113,6 +112,8 @@ Invitations represent the physical invites that would be sent out to individuals
 These are the options for meals that are presented to a guest when they RSVP.  A meal choice includes a name and a description.  The Meal Choices table includes a count and list of all guests that have selected a particular choice.
 
 <img width="925" height="266" alt="image" src="https://github.com/user-attachments/assets/6f8c3629-e1c6-4f94-bf0e-976746bae918" />
+
+If the meal choices are removed from the database, a guest will not be prompted to select a meal choice when RSVPing.
 
 #### Dietary Restrictions: keep track of individual's dietary restrictions
 
