@@ -2,7 +2,7 @@
 
 This is a [Directus](https://directus.io/) database and management tool used for wedding planning and to populate the content of a [wedding website](https://github.com/dwaring87/wedding-site).
 
-It can be used to manage customizable pages on the wesbite, guest lists, and invitations to groups of guests.  The guests can RSVP to the wedding on the website and their information is stored in the database.
+It can be used to manage customizable pages on the website, guest lists, and invitations to groups of guests.  The guests can RSVP to the wedding on the website and their information is stored in the database.  There is a pre-installed mailing lists module that allows you to send email messages to guests.
 
 ## Main Features
 
@@ -158,8 +158,25 @@ An alert is an important message that is displayed prominently on all pages of t
 
 ### <img width="51" height="48" alt="image" src="https://github.com/user-attachments/assets/b0ce1149-b742-4c5d-9607-879dbfaacccc" /> Files
 
+The files module can be used to manage additional files, such as photos, used as photos on the website and added to your pages.  Files can be uploaded from your device or downloaded from an external website with a URL.  You can organize photos in folders or with tags.
+
+<img width="1214" height="716" alt="image" src="https://github.com/user-attachments/assets/72847138-d2b5-4625-8cf9-312f7e2117b3" />
+
+
 ### <img width="51" height="48" alt="image" src="https://github.com/user-attachments/assets/ed1635d5-f9ee-4d58-bcbc-68b0e106fac7" /> Mailing Lists
+
+The Mailing Lists module can be used to send email messages to your guests.  The guests must have an email address added to their entry in the Guests table (either by you or after they've RSVPed).  There are two preconfigured mailing lists - one for all guests and one for guests that have RSVPed yes.  The body of the message can include variables, such as the guest's name (select a mailing list from the Lists panel and click the "Test" button to see all variables that are available).
+
+<img width="1171" height="852" alt="image" src="https://github.com/user-attachments/assets/ce892ae9-97ca-4245-9f45-13f95c564f23" />
+
+In order to use the mailing lists feature, an [email provider must be configured](https://directus.io/docs/configuration/email) with the Directus instance in order to send outgoing mail.
+
 
 ### <img width="51" height="48" alt="image" src="https://github.com/user-attachments/assets/8309f772-3f5c-4aa2-ace3-0d88fcda4e06" /> Users
 
+The Users module contains the User Directory, which is a list of all accounts that can access the Directus CMS and view and/or modify contents of the database directly.  By default, there is your admin account, a Nuxt API account (which has minimal read permissions and update permissions on the guests table to fetch data for display on the website and allow guests to update their information via the website), and an Intial Setup account used to create the initial database structure (and has been disabled).
+
+<img width="1456" height="393" alt="image" src="https://github.com/user-attachments/assets/334c1b39-1f11-49a8-b340-4c024c69c45d" />
+
+You can create additional users to give others access to the database.  To do so, click the '+' icon in the top right and fill out the new user form.  The user should have a name, email address, and password set.  To give them full access to all collections in the database, you can assign them the Administrator role (under Admin Options at the bottom of the form).  You can also [create additional roles](https://directus.io/docs/guides/auth/access-control) if you want the user to have different access policies.
 
