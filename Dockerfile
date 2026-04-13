@@ -9,6 +9,7 @@ RUN apk update && apk add --no-cache sqlite jq imagemagick font-inconsolata font
 USER node
 RUN pnpm install directus-extension-human-readable-id
 RUN pnpm install directus-extension-mailing-lists
+RUN pnpm install directus-extension-generate-invitations-endpoint
 RUN pnpm install directus-extension-table-layout
 
 # Copy the initial database, uploads, and templates
