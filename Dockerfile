@@ -2,7 +2,7 @@ FROM directus/directus:11
 
 USER root
 RUN corepack enable
-RUN apk update && apk add --no-cache sqlite jq imagemagick font-inconsolata font-noto font-noto-extra libqrencode-tools
+RUN apk update && apk add --no-cache sqlite jq imagemagick ghostscript font-inconsolata font-noto font-noto-extra libqrencode-tools
 
 # Install the Human-Readable-ID directus extension - used to generate invite codes
 # and the mailing lists extension - used to send emails to guests
